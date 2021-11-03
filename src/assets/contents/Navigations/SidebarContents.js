@@ -6,7 +6,7 @@ export const SidebarMainContents = [
   {
     icon: <MdStore />,
     title: 'Dashboard',
-    link: '/',
+    link: '/dashboard',
   },
   {
     icon: <MdBusiness />,

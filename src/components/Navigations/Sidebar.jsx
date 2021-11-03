@@ -2,9 +2,10 @@ import React from 'react'
 
 // components
 import ImageAndTexts from '../ImageAndTexts/ImageAndTexts'
+import SidebarLink from './SidebarLink'
 
 // styles
-import { StyledImageAndTexts, StyledSidebar, StyledSidebarLink } from './styles/StyledSidebar'
+import { StyledImageAndTexts, StyledSidebar } from './styles/StyledSidebar'
 
 // utils
 import { SidebarMainContents, SidebarAccountContents } from '../../assets/contents/Navigations/SidebarContents'
@@ -17,21 +18,9 @@ const Sidebar = () => {
         <ImageAndTexts image={logoImage} title='Soft UI Dashboard' />
       </StyledImageAndTexts>
 
-      {SidebarMainContents.map((content) => (
-        <StyledSidebarLink to={content.link} key={content.title + 'qwerty'}>
-          <button>{content.icon}</button>
-          <p>{content.title}</p>
-        </StyledSidebarLink>
-      ))}
-
+      <SidebarLink contents={SidebarMainContents} />
       <p className='account_pages_title'>Account Pages</p>
-
-      {SidebarAccountContents.map((content) => (
-        <StyledSidebarLink to={content.link} key={content.title + 'qwerty'}>
-          <button>{content.icon}</button>
-          <p>{content.title}</p>
-        </StyledSidebarLink>
-      ))}
+      <SidebarLink contents={SidebarAccountContents} />
     </StyledSidebar>
   )
 }
