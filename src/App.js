@@ -1,17 +1,20 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 
 // pages
 import Dashboard from './pages/Dashboard/Dashboard'
 
 // styles
-import { GlobalStyles } from './GlobalStyles'
+import { GlobalStyles, StyledApp } from './GlobalStyles'
 
 function App() {
   return (
-    <>
+    <StyledApp>
       <GlobalStyles />
-      <Dashboard />
-    </>
+      <Switch>
+        <Route exact path='/' component={Dashboard} />
+      </Switch>
+    </StyledApp>
   )
 }
 

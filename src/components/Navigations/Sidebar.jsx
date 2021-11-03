@@ -1,20 +1,38 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+// components
+import ImageAndTexts from '../ImageAndTexts/ImageAndTexts'
+
+// styles
+import { StyledImageAndTexts, StyledSidebar, StyledSidebarLink } from './styles/StyledSidebar'
 
 // utils
-import { SidebarContents } from '../../assets/contents/Navigations/SidebarContents'
-import { formatLink } from '../../utils/formatLink'
+import { SidebarMainContents, SidebarAccountContents } from '../../assets/contents/Navigations/SidebarContents'
+import logoImage from '../../assets/images/logo-ct.png'
 
 const Sidebar = () => {
   return (
-    <nav>
-      {SidebarContents.map((content) => (
-        <Link to={'/' + formatLink(content.title)}>
-          {content.icon}
+    <StyledSidebar>
+      <StyledImageAndTexts>
+        <ImageAndTexts image={logoImage} title='Soft UI Dashboard' />
+      </StyledImageAndTexts>
+
+      {SidebarMainContents.map((content) => (
+        <StyledSidebarLink to={content.link} key={content.title + 'qwerty'}>
+          <button>{content.icon}</button>
           <p>{content.title}</p>
-        </Link>
+        </StyledSidebarLink>
       ))}
-    </nav>
+
+      <p className='account_pages_title'>Account Pages</p>
+
+      {SidebarAccountContents.map((content) => (
+        <StyledSidebarLink to={content.link} key={content.title + 'qwerty'}>
+          <button>{content.icon}</button>
+          <p>{content.title}</p>
+        </StyledSidebarLink>
+      ))}
+    </StyledSidebar>
   )
 }
 
