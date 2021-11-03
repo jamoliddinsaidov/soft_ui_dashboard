@@ -1,7 +1,7 @@
 import React from 'react'
 
 // components
-import Sidebar from '../components/Navigations/Sidebar'
+import Sidenav from '../components/Navigations/Sidenav'
 
 // styles
 import { StyledMainLayoutContainer, StyledMainLayout } from './styles/StyledMainLayout'
@@ -9,7 +9,7 @@ import { StyledMainLayoutContainer, StyledMainLayout } from './styles/StyledMain
 const MainLayout = ({ children }) => {
   return (
     <StyledMainLayout>
-      <Sidebar />
+      <Sidenav />
       <StyledMainLayoutContainer>{children}</StyledMainLayoutContainer>
     </StyledMainLayout>
   )

@@ -1,13 +1,27 @@
 import styled from 'styled-components'
 import { colors, Flex } from '../../../GlobalStyles'
 
-export const StyledSidebar = styled.nav`
+export const StyledSidenav = styled.nav`
   background: #fff;
   padding: 2em;
   width: 100%;
-  min-height: 95vh;
-  position: fixed;
+  height: 95vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   border-radius: 1em;
+
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${colors.backgroundColor};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background: ${colors.lightBlue};
+  }
 
   .account_pages_title {
     margin: 1em 0 1.7em;

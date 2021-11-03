@@ -7,6 +7,7 @@ export const colors = {
   textColor: 'rgba(0, 0, 0, 0.8)',
   lightBlue: '#1ac0e8',
   darkBlue: '#2070fd',
+  blueGradient: 'linear-gradient(310deg, rgb(33, 82, 255), rgb(33, 212, 253))',
 }
 
 export const GlobalStyles = createGlobalStyle`

@@ -2,10 +2,13 @@ import React from 'react'
 
 // components
 import ImageAndTexts from '../ImageAndTexts/ImageAndTexts'
-import SidebarLink from './SidebarLink'
+import SidenavLink from './SidenavLink'
+import SidenavCard from './SidenavCard'
+import SidenavButton from '../Buttons/SidenavButton'
 
 // styles
-import { StyledImageAndTexts, StyledSidebar } from './styles/StyledSidebar'
+import { StyledImageAndTexts, StyledSidenav } from './styles/StyledSidenav'
+import { colors } from '../../GlobalStyles'
 
 // utils
 import { SidebarMainContents, SidebarAccountContents } from '../../assets/contents/Navigations/SidebarContents'
@@ -13,15 +16,18 @@ import logoImage from '../../assets/images/logo-ct.png'
 
 const Sidebar = () => {
   return (
-    <StyledSidebar>
+    <StyledSidenav>
       <StyledImageAndTexts>
         <ImageAndTexts image={logoImage} title='Soft UI Dashboard' />
       </StyledImageAndTexts>
 
-      <SidebarLink contents={SidebarMainContents} />
+      <SidenavLink contents={SidebarMainContents} />
       <p className='account_pages_title'>Account Pages</p>
-      <SidebarLink contents={SidebarAccountContents} />
-    </StyledSidebar>
+      <SidenavLink contents={SidebarAccountContents} />
+
+      <SidenavCard />
+      <SidenavButton title='Upgrade to pro' bgColor={colors.blueGradient} color='#fff' width='110%' />
+    </StyledSidenav>
   )
 }
 
