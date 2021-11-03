@@ -10,5 +10,6 @@ export const StyledMainLayout = styled.div`
 
 export const StyledMainLayoutContainer = styled.div`
   width: 80%;
-  margin-left: auto;
+  margin: 1.5em 0 1.5em auto;
+  padding-right: 1.5em;
 `
