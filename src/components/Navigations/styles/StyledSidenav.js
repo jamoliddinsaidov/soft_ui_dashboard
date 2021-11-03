@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { colors, Flex } from '../../../GlobalStyles'
 
 export const StyledSidenav = styled.nav`
   background: #fff;
@@ -11,16 +10,7 @@ export const StyledSidenav = styled.nav`
   border-radius: 1em;
 
   &::-webkit-scrollbar {
-    width: 0.3rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: ${colors.backgroundColor};
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 1rem;
-    background: ${colors.lightBlue};
+    width: 0;
   }
 
   .account_pages_title {
@@ -29,21 +19,5 @@ export const StyledSidenav = styled.nav`
     color: #969494;
     text-transform: uppercase;
     font-size: 0.8rem;
-  }
-`
-
-export const StyledImageAndTexts = styled(Flex)`
-  margin-bottom: 1.5em;
-  padding-bottom: 1.5em;
-  border-bottom: 2px solid ${colors.backgroundColor};
-
-  img {
-    width: 17%;
-  }
-
-  p {
-    margin-left: 0.5em;
-    font-weight: 600;
-    color: ${colors.textColor};
   }
 `

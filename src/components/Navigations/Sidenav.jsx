@@ -7,7 +7,7 @@ import SidenavCard from './SidenavCard'
 import SidenavButton from '../Buttons/SidenavButton'
 
 // styles
-import { StyledImageAndTexts, StyledSidenav } from './styles/StyledSidenav'
+import { StyledSidenav } from './styles/StyledSidenav'
 import { colors } from '../../GlobalStyles'
 
 // utils
@@ -17,9 +17,7 @@ import logoImage from '../../assets/images/logo-ct.png'
 const Sidebar = () => {
   return (
     <StyledSidenav>
-      <StyledImageAndTexts>
-        <ImageAndTexts image={logoImage} title='Soft UI Dashboard' />
-      </StyledImageAndTexts>
+      <ImageAndTexts image={logoImage} title='Soft UI Dashboard' />
 
       <SidenavLink contents={SidebarMainContents} />
       <p className='account_pages_title'>Account Pages</p>
