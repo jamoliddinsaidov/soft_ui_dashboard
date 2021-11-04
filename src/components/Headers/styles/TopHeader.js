@@ -69,13 +69,9 @@ export const StyledHeaderSearchBar = styled(Flex)`
     font-size: 0.9rem;
     transition: all 400ms ease;
 
-    &:hover,
     &:active,
     &:focus {
       border: 2px solid ${colors.lightBlue};
-    }
-
-    &:focus {
       padding: 0.8em 1.4em;
     }
   }
