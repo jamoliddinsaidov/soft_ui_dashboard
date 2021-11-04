@@ -61,6 +61,7 @@ export const StyledApp = styled.div`
   min-height: 100vh;
   padding: 1em;
   background: ${colors.backgroundColor};
+  /* font-family: 'Roboto', sans-serif; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;

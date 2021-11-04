@@ -3,7 +3,6 @@ import { FlexBetween, colors } from '../../../GlobalStyles'
 
 export const StyledGrowthCard = styled(FlexBetween)`
   width: 23%;
-  margin: 0 auto;
   background: #fff;
   padding: 1em;
   border-radius: 1em;
