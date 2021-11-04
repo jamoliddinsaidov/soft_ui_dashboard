@@ -5,9 +5,10 @@ import MainLayout from '../../layouts/MainLayout'
 import TopHeader from '../../components/Headers/TopHeader'
 import GrowthCard from '../../components/Cards/GrowthCard'
 import ActionsCard from '../../components/Cards/ActionsCard'
+import ProjectsCard from '../../components/Cards/ProjectsCard'
 
 // styles
-import { StyledGrowthCards, StyledActionsCards } from './styles/StyledDashboard'
+import { StyledGrowthCards, StyledActionsCards, StyledProjectsContainer } from './styles/StyledDashboard'
 
 // utils
 import { GrowthCardContents } from '../../assets/contents/Dashboard/GrowthCardContents'
@@ -42,6 +43,11 @@ const Dashboard = () => {
           />
         ))}
       </StyledActionsCards>
+
+      <StyledProjectsContainer>
+        <div>Orders overview</div>
+        <ProjectsCard />
+      </StyledProjectsContainer>
     </MainLayout>
   )
 }

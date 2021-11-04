@@ -17,3 +17,16 @@ export const StyledActionsCards = styled(FlexBetween)`
     flex: 1;
   }
 `
+
+export const StyledProjectsContainer = styled(FlexBetween)`
+  margin-top: 2em;
+
+  div:first-child {
+    flex: 1;
+  }
+
+  div:nth-child(2) {
+    flex: 2;
+    margin-left: 2em;
+  }
+`
