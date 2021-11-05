@@ -6,6 +6,7 @@ import TopHeader from '../../components/Headers/TopHeader'
 import GrowthCard from '../../components/Cards/GrowthCard'
 import ActionsCard from '../../components/Cards/ActionsCard'
 import ProjectsCard from '../../components/Cards/ProjectsCard'
+import OrdersCard from '../../components/Cards/OrdersCard'
 
 // styles
 import { StyledGrowthCards, StyledActionsCards, StyledProjectsContainer } from './styles/StyledDashboard'
@@ -13,6 +14,7 @@ import { StyledGrowthCards, StyledActionsCards, StyledProjectsContainer } from '
 // utils
 import { GrowthCardContents } from '../../assets/contents/Dashboard/GrowthCardContents'
 import { ActionsCardContent } from '../../assets/contents/Dashboard/ActionsCardContent'
+import { ProjectsCardTableHeaders, ProjectsCardTableBody } from '../../assets/contents/Dashboard/ProjectsCardContent'
 
 const Dashboard = () => {
   return (
@@ -45,8 +47,7 @@ const Dashboard = () => {
       </StyledActionsCards>
 
       <StyledProjectsContainer>
-        <div>Orders overview</div>
-        <ProjectsCard />
+        <ProjectsCard tableHeaders={ProjectsCardTableHeaders} tableBody={ProjectsCardTableBody} />
       </StyledProjectsContainer>
     </MainLayout>
   )

@@ -15,9 +15,8 @@ import {
 // utils
 import { ImCheckmark } from 'react-icons/im'
 import { GoKebabVertical } from 'react-icons/go'
-import { ProjectsCardTableHeaders, ProjectsCardTableBody } from '../../assets/contents/Dashboard/ProjectsCardContent'
 
-const ProjectsCard = () => {
+const ProjectsCard = ({ tableHeaders, tableBody }) => {
   return (
     <StyledProjectsCard>
       <StyledPCHeader>
@@ -36,21 +35,21 @@ const ProjectsCard = () => {
       <StylePCTable>
         <thead>
           <tr>
-            {ProjectsCardTableHeaders.map((header, index) => (
+            {tableHeaders.map((header, index) => (
               <th key={header + index}>{header}</th>
             ))}
           </tr>
         </thead>
 
         <tbody>
-          {ProjectsCardTableBody.map((body, index) => (
-            <tr key={body.companyName + index}>
+          {tableBody.map((body, index) => (
+            <tr key={body.name + index}>
               <td className='company_column'>
-                <ImageAndTexts image={body.companyImg} title={body.companyName} />
+                <ImageAndTexts image={body.img} title={body.name} />
               </td>
               <StyledPCTableMembers>
                 {body.members.map((member) => (
-                  <img src={member} alt={body.companyName} key={member + index} />
+                  <img src={member} alt={member} key={member + index} />
                 ))}
               </StyledPCTableMembers>
               <td className='budget_column'>{body.budget}</td>
