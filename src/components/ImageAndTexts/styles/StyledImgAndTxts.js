@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { colors, Flex } from '../../../GlobalStyles'
 
 export const StyledImageAndTexts = styled(Flex)`
-  margin-bottom: 1.5em;
-  padding-bottom: 1.5em;
-  border-bottom: 2px solid ${colors.backgroundColor};
+  margin-bottom: ${({ border }) => (border ? '1.5em' : 'none')};
+  padding-bottom: ${({ border }) => (border ? '1.5em' : 'none')};
+  border-bottom: ${({ border }) => (border ? `2px solid ${colors.backgroundColor}` : 'none')};
 
   img {
     width: 17%;

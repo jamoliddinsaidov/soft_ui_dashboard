@@ -17,7 +17,7 @@ import logoImage from '../../assets/images/logo-ct.png'
 const Sidebar = () => {
   return (
     <StyledSidenav>
-      <ImageAndTexts image={logoImage} title='Soft UI Dashboard' />
+      <ImageAndTexts image={logoImage} title='Soft UI Dashboard' border={true} />
 
       <SidenavLink contents={SidebarMainContents} />
       <p className='account_pages_title'>Account Pages</p>

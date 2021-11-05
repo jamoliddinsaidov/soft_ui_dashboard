@@ -26,7 +26,7 @@ export const StyledProjectsContainer = styled(FlexBetween)`
   }
 
   div:nth-child(2) {
-    flex: 2;
+    flex: 2.2;
     margin-left: 2em;
   }
 `

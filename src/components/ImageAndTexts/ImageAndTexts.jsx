@@ -3,9 +3,9 @@ import React from 'react'
 // styles
 import { StyledImageAndTexts } from './styles/StyledImgAndTxts'
 
-const ImageAndTexts = ({ image, title, additional }) => {
+const ImageAndTexts = ({ image, title, additional, border }) => {
   return (
-    <StyledImageAndTexts>
+    <StyledImageAndTexts border={border}>
       <img src={image} alt={title} />
       <div>
         <p>{title}</p>
