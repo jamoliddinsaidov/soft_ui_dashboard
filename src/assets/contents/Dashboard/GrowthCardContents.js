@@ -1,11 +1,11 @@
-import { MdAttachMoney, MdPublic, MdEmojiEvents, MdShoppingCart } from 'react-icons/md'
+import { MdPaid, MdPublic, MdEmojiEvents, MdShoppingCart } from 'react-icons/md'
 
 export const GrowthCardContents = [
   {
     title: "Today's money",
     data: '$53,000',
     percent: '+55%',
-    icon: <MdAttachMoney />,
+    icon: <MdPaid />,
   },
   {
     title: "Today's Users",
