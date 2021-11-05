@@ -5,6 +5,8 @@ export const StyledProjectsCard = styled.div`
   background: #fff;
   border-radius: 1em;
   padding: 2em;
+  box-shadow: 3px 2px 7px -12px rgba(0, 0, 0, 1);
+  margin-left: 2em;
 `
 
 export const StyledPCHeader = styled(FlexBetween)`
@@ -82,12 +84,7 @@ export const StylePCTable = styled.table`
   }
 
   .company_column {
-    img {
-      margin-left: 2%;
-    }
-
     p {
-      margin-left: -5%;
       color: ${colors.iconColor};
     }
   }

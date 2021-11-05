@@ -5,7 +5,7 @@ export const OrdersCardContent = [
     icon: <MdNotifications />,
     title: '$2400, Design changes',
     subtitle: '22 DEC 7:20 PM',
-    iconColor: 'rgb(152, 236, 45)',
+    iconColor: 'rgb(23, 173, 55)',
   },
   {
     icon: <MdOutlineInventory2 />,

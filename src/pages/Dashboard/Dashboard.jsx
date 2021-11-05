@@ -11,10 +11,11 @@ import OrdersCard from '../../components/Cards/OrdersCard'
 // styles
 import { StyledGrowthCards, StyledActionsCards, StyledProjectsContainer } from './styles/StyledDashboard'
 
-// utils
+// contents
 import { GrowthCardContents } from '../../assets/contents/Dashboard/GrowthCardContents'
 import { ActionsCardContent } from '../../assets/contents/Dashboard/ActionsCardContent'
 import { ProjectsCardTableHeaders, ProjectsCardTableBody } from '../../assets/contents/Dashboard/ProjectsCardContent'
+import { OrdersCardContent } from '../../assets/contents/Dashboard/OrdersCardContent'
 
 const Dashboard = () => {
   return (
@@ -47,6 +48,7 @@ const Dashboard = () => {
       </StyledActionsCards>
 
       <StyledProjectsContainer>
+        <OrdersCard content={OrdersCardContent} />
         <ProjectsCard tableHeaders={ProjectsCardTableHeaders} tableBody={ProjectsCardTableBody} />
       </StyledProjectsContainer>
     </MainLayout>
