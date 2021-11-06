@@ -7,6 +7,7 @@ import GrowthCard from '../../components/Cards/GrowthCard'
 import ActionsCard from '../../components/Cards/ActionsCard'
 import ProjectsCard from '../../components/Cards/ProjectsCard'
 import OrdersCard from '../../components/Cards/OrdersCard'
+import MainFooter from '../../components/Footers/MainFooter'
 
 // styles
 import { StyledGrowthCards, StyledActionsCards, StyledProjectsContainer } from './styles/StyledDashboard'
@@ -51,6 +52,8 @@ const Dashboard = () => {
         <OrdersCard content={OrdersCardContent} />
         <ProjectsCard tableHeaders={ProjectsCardTableHeaders} tableBody={ProjectsCardTableBody} />
       </StyledProjectsContainer>
+
+      <MainFooter />
     </MainLayout>
   )
 }
