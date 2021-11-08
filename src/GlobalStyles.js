@@ -59,6 +59,10 @@ export const GlobalStyles = createGlobalStyle`
     background: ${colors.lightBlue};
   }
 
+  html{
+    scroll-behavior: smooth;
+  }
+
   table{
     width: 100%;
     border-collapse: collapse;
