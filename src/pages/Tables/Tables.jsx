@@ -7,7 +7,7 @@ import AuthorsCard from '../../components/Cards/AuthorsCard'
 import ProjectsCard from '../../components/Cards/ProjectsCard'
 
 // styles
-import { StyledProjectsTable } from './styles/StyledTables'
+import { StyledProjectsTable, StyledPCTable } from './styles/StyledTables'
 
 // utils
 import { AuthorsCardContentHeaders, AuthorsCardContentBody } from '../../assets/contents/Tables/AuthorsCardContent'
@@ -19,7 +19,11 @@ const Tables = () => {
       <TopHeader page='Tables' />
       <AuthorsCard contentHeaders={AuthorsCardContentHeaders} contentBody={AuthorsCardContentBody} />
       <StyledProjectsTable>
-        {/* <ProjectsCard tableHeaders={ProjectsCardTableHeaders} tableBody={ProjectsCardTableBody} /> */}
+        <ProjectsCard
+          tableHeaders={ProjectsCardTableHeaders}
+          tableBody={ProjectsCardTableBody}
+          StyledPCTable={StyledPCTable}
+        />
       </StyledProjectsTable>
     </MainLayout>
   )

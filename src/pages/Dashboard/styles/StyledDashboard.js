@@ -29,6 +29,7 @@ export const StyledProjectsContainer = styled(FlexBetween)`
     flex: 2.2;
   }
 `
+
 export const StyledProjectsCard = styled.div`
   width: 100%;
   background: #fff;
@@ -37,10 +38,8 @@ export const StyledProjectsCard = styled.div`
   box-shadow: 3px 2px 7px -12px rgba(0, 0, 0, 1);
   margin-left: 2em;
 `
-export const StyledPCTable = styled.table`
-  width: 100%;
-  border-collapse: collapse;
 
+export const StyledPCTable = styled.table`
   th:first-child,
   th:nth-child(2) {
     text-align: start;

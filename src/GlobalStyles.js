@@ -58,6 +58,11 @@ export const GlobalStyles = createGlobalStyle`
   body::-webkit-scrollbar-thumb {
     background: ${colors.lightBlue};
   }
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+  }
 `
 
 export const StyledApp = styled.div`

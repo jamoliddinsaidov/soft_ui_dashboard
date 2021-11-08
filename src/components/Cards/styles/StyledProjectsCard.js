@@ -37,10 +37,11 @@ export const StyledPCHeader = styled(FlexBetween)`
 export const StyledCompletitionColumn = styled.td`
   div {
     background: ${colors.backgroundColor};
-    width: 100%;
+    width: ${({ isCompany }) => (isCompany ? '100%' : '80%')};
     height: 0.4rem;
     border-radius: 1em;
     position: relative;
+    margin: ${({ isCompany }) => (isCompany ? '0' : '0 auto')};
 
     &:before {
       content: '${({ amount }) => `${amount}%`}';
