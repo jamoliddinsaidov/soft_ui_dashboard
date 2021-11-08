@@ -12,6 +12,7 @@ export const StyledTopHeader = styled(FlexBetween)`
   backdrop-filter: blur(2rem);
   padding: 1em 2em;
   border-radius: 1em;
+  box-shadow: 3px 2px 7px -7px rgba(0, 0, 0, 1);
 `
 
 export const BreadcrumbNav = styled(Flex)`

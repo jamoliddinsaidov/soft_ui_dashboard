@@ -6,9 +6,11 @@ import person4 from '../../images/team-4.jpg'
 import person5 from '../../images/team-1.jpg'
 import person6 from '../../images/marie.jpg'
 
-export const AuthorsCardContent = [
+export const AuthorsCardContentHeaders = ['AUTHOR', 'FUNCTION', 'STATUS', 'EMPLOYED', 'ACTION']
+
+export const AuthorsCardContentBody = [
   {
-    img: person1,
+    img: person3,
     name: 'John Michael',
     email: 'john@company.com',
     jobTitle: 'Manager',
@@ -28,7 +30,7 @@ export const AuthorsCardContent = [
     action: 'edit',
   },
   {
-    img: person3,
+    img: person1,
     name: 'Laurent Perrier',
     email: 'laurent@company.com',
     jobTitle: 'Executive',
