@@ -17,7 +17,7 @@ export const AuthorsCardContentBody = [
     jobType: 'Organization',
     status: 'online',
     employedDate: '23/04/18',
-    action: 'edit',
+    action: 'Edit',
   },
   {
     img: person2,
@@ -27,7 +27,7 @@ export const AuthorsCardContentBody = [
     jobType: 'Developer',
     status: 'offline',
     employedDate: '11/01/19',
-    action: 'edit',
+    action: 'Edit',
   },
   {
     img: person1,
@@ -37,7 +37,7 @@ export const AuthorsCardContentBody = [
     jobType: 'Projects',
     status: 'online',
     employedDate: '19/09/17',
-    action: 'edit',
+    action: 'Edit',
   },
   {
     img: person4,
@@ -47,7 +47,7 @@ export const AuthorsCardContentBody = [
     jobType: 'Developer',
     status: 'online',
     employedDate: '24/12/08',
-    action: 'edit',
+    action: 'Edit',
   },
   {
     img: person5,
@@ -57,7 +57,7 @@ export const AuthorsCardContentBody = [
     jobType: 'Executive',
     status: 'offline',
     employedDate: '04/10/21',
-    action: 'edit',
+    action: 'Edit',
   },
   {
     img: person6,
@@ -67,6 +67,6 @@ export const AuthorsCardContentBody = [
     jobType: 'Developer',
     status: 'offline',
     employedDate: '14/09/20',
-    action: 'edit',
+    action: 'Edit',
   },
 ]

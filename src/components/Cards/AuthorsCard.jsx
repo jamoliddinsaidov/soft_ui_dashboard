@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // styles
-import { StyledAuthorsCard } from './styles/StyledAuthorsCard'
+import { StyledAuthorsCard, StyledACTable, StyledAuthorStatus } from './styles/StyledAuthorsCard'
 
 const AuthorsCard = ({ contentHeaders, contentBody }) => {
   return (
     <StyledAuthorsCard>
       <h4>Authors table</h4>
 
-      <table>
+      <StyledACTable>
         <thead>
           <tr>
             {contentHeaders.map((header, index) => (
@@ -34,21 +34,21 @@ const AuthorsCard = ({ contentHeaders, contentBody }) => {
                 <p className='job_type'>{body.jobType}</p>
               </td>
 
-              <td>
+              <StyledAuthorStatus status={body.status}>
                 <p>{body.status}</p>
-              </td>
+              </StyledAuthorStatus>
 
-              <td>
+              <td className='grey_text'>
                 <p>{body.employedDate}</p>
               </td>
 
-              <td>
-                <Link href='#'>{body.action}</Link>
+              <td className='grey_text'>
+                <p>{body.action}</p>
               </td>
             </tr>
           ))}
         </tbody>
-      </table>
+      </StyledACTable>
     </StyledAuthorsCard>
   )
 }
