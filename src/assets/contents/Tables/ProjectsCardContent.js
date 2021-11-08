@@ -6,7 +6,7 @@ import img5 from '../../images/small-logos/logo-jira.svg'
 import img6 from '../../images/small-logos/logo-invision.svg'
 import { GoKebabVertical } from 'react-icons/go'
 
-export const ProjectsCardTableHeaders = ['Companies', 'Members', 'Budget', 'Completion']
+export const ProjectsCardTableHeaders = ['PROJECT', 'BUDGET', 'STATUS', 'COMPLETION', 'ACTION']
 
 export const ProjectsCardTableBody = [
   {

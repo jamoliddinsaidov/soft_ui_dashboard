@@ -4,35 +4,33 @@ import React from 'react'
 import ImageAndTexts from '../ImageAndTexts/ImageAndTexts'
 
 // styles
-import {
-  StyledProjectsCard,
-  StyledPCHeader,
-  StylePCTable,
-  StyledPCTableMembers,
-  StyledCompletitionColumn,
-} from './styles/StyledProjectsCard'
+import { StyledPCHeader, StyledPCTableMembers, StyledCompletitionColumn } from './styles/StyledProjectsCard'
 
 // utils
 import { ImCheckmark } from 'react-icons/im'
 import { GoKebabVertical } from 'react-icons/go'
 
-const ProjectsCard = ({ tableHeaders, tableBody }) => {
+const ProjectsCard = ({ tableHeaders, tableBody, StyledPCTable }) => {
   return (
-    <StyledProjectsCard>
+    <>
       <StyledPCHeader>
         <div>
           <h3>Projects</h3>
-          <p>
-            <ImCheckmark /> <span>30 done</span> this month
-          </p>
+          {tableHeaders.includes('Companies') && (
+            <p>
+              <ImCheckmark /> <span>30 done</span> this month
+            </p>
+          )}
         </div>
 
-        <button>
-          <GoKebabVertical />
-        </button>
+        {tableHeaders.includes('Companies') && (
+          <button>
+            <GoKebabVertical />
+          </button>
+        )}
       </StyledPCHeader>
 
-      <StylePCTable>
+      <StyledPCTable>
         <thead>
           <tr>
             {tableHeaders.map((header, index) => (
@@ -47,20 +45,29 @@ const ProjectsCard = ({ tableHeaders, tableBody }) => {
               <td className='company_column'>
                 <ImageAndTexts image={body.img} title={body.name} />
               </td>
-              <StyledPCTableMembers>
-                {body.members.map((member) => (
-                  <img src={member} alt={member} key={member + index} />
-                ))}
-              </StyledPCTableMembers>
+
+              {body.members && (
+                <StyledPCTableMembers>
+                  {body.members.map((member) => (
+                    <img src={member} alt={member} key={member + index} />
+                  ))}
+                </StyledPCTableMembers>
+              )}
+
               <td className='budget_column'>{body.budget}</td>
-              <StyledCompletitionColumn amount={body.completition}>
+
+              {body.status && <td className='status_column'>{body.status}</td>}
+
+              <StyledCompletitionColumn amount={body.completition} isCompany={tableHeaders.includes('Companies')}>
                 <div></div>
               </StyledCompletitionColumn>
+
+              {body.action && <td>{body.action}</td>}
             </tr>
           ))}
         </tbody>
-      </StylePCTable>
-    </StyledProjectsCard>
+      </StyledPCTable>
+    </>
   )
 }
 

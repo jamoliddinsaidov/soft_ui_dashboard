@@ -10,10 +10,10 @@ const MainFooter = () => {
   return (
     <StyledMainFooter>
       <p>
-        &copy; 2021, made with <MdFavorite /> by{' '}
+        &copy; 2021, made with <MdFavorite /> by
         <a href='https://github.com/sjamoliddin/' target='_blank' rel='noreferrer'>
           Jamoliddin
-        </a>{' '}
+        </a>
         for a better web.
       </p>
 

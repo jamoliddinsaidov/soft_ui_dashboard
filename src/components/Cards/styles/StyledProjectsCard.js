@@ -1,14 +1,6 @@
 import styled from 'styled-components'
 import { colors, FlexBetween } from '../../../GlobalStyles'
 
-export const StyledProjectsCard = styled.div`
-  background: #fff;
-  border-radius: 1em;
-  padding: 2em;
-  box-shadow: 3px 2px 7px -12px rgba(0, 0, 0, 1);
-  margin-left: 2em;
-`
-
 export const StyledPCHeader = styled(FlexBetween)`
   margin-bottom: 2em;
 
@@ -42,53 +34,6 @@ export const StyledPCHeader = styled(FlexBetween)`
   }
 `
 
-export const StylePCTable = styled.table`
-  border-collapse: collapse;
-
-  th:first-child,
-  th:nth-child(2) {
-    text-align: start;
-  }
-
-  th,
-  td {
-    border-bottom: 2px solid ${colors.backgroundColor};
-  }
-
-  th {
-    padding-bottom: 2em;
-    color: ${colors.textColor};
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    opacity: 0.5;
-  }
-
-  td:first-child {
-    width: 45%;
-
-    img {
-      width: 10%;
-    }
-  }
-
-  td {
-    padding: 1em 0;
-    color: ${colors.textColor};
-  }
-
-  .budget_column {
-    font-weight: 500;
-    font-size: 0.9rem;
-    width: 22%;
-    text-align: center;
-  }
-
-  .company_column {
-    p {
-      color: ${colors.iconColor};
-    }
-  }
-`
 export const StyledCompletitionColumn = styled.td`
   div {
     background: ${colors.backgroundColor};
@@ -112,7 +57,8 @@ export const StyledCompletitionColumn = styled.td`
       width: ${({ amount }) => `${amount}%`};
       height: 100%;
       border-radius: 1em;
-      background-image: ${({ amount }) => (amount >= 70 ? colors.greenGradient : colors.blueGradient)};
+      background-image: ${({ amount, isCompany }) =>
+        amount >= 90 ? colors.greenGradient : amount >= 50 || isCompany ? colors.blueGradient : colors.redGradient};
     }
   }
 `

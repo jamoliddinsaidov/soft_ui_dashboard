@@ -6,6 +6,7 @@ export const StyledAuthorsCard = styled.div`
   background: #fff;
   border-radius: 1em;
   padding: 1em;
+  margin-bottom: 2em;
   box-shadow: 3px 2px 7px -12px rgba(0, 0, 0, 1);
 
   h4 {
