@@ -5,6 +5,7 @@ import MainLayout from '../../layouts/MainLayout'
 import TopHeader from '../../components/Headers/TopHeader'
 import AuthorsCard from '../../components/Cards/AuthorsCard'
 import ProjectsCard from '../../components/Cards/ProjectsCard'
+import MainFooter from '../../components/Footers/MainFooter'
 
 // styles
 import { StyledProjectsTable, StyledPCTable } from './styles/StyledTables'
@@ -25,6 +26,7 @@ const Tables = () => {
           StyledPCTable={StyledPCTable}
         />
       </StyledProjectsTable>
+      <MainFooter />
     </MainLayout>
   )
 }
