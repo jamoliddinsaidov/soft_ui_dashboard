@@ -6,7 +6,7 @@ export const StyledTopHeader = styled(FlexBetween)`
   margin-bottom: 2em;
   background: transparent;
   position: sticky;
-  top: 30px;
+  top: 15px;
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
   z-index: 2;
   backdrop-filter: blur(2rem);
