@@ -14,6 +14,7 @@ export const colors = {
   greenGradient: 'linear-gradient(310deg, rgb(23, 173, 55), rgb(152, 236, 45))',
   greyGradient: 'linear-gradient(310deg, rgb(98, 117, 148), rgb(168, 184, 216))',
   redGradient: 'linear-gradient(310deg, rgb(234, 6, 6), rgb(255, 102, 124))',
+  blackGradient: 'linear-gradient(310deg, rgb(20, 23, 39), rgb(58, 65, 111))',
 }
 
 export const GlobalStyles = createGlobalStyle`

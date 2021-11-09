@@ -6,7 +6,7 @@ export const StyledBudgetCard = styled(FlexColumn)`
   align-items: center;
   background: #fff;
   border-radius: 1em;
-  margin-left: 2em;
+  margin-left: auto;
   padding: 1em 2em;
   text-align: center;
   color: ${colors.textColor};
