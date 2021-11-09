@@ -4,12 +4,14 @@ import React from 'react'
 import MainLayout from '../../layouts/MainLayout'
 import TopHeader from '../../components/Headers/TopHeader'
 import DebitCard from '../../components/Cards/DebitCard'
+import BudgetCard from '../../components/Cards/BudgetCard'
 
 // styles
 import { StyledPaymentsContainer, StyledPayments, StyledInvoices } from './styles/StyledBilling'
 
 // utils
 import { DebitCardContent } from '../../assets/contents/Billings/DebitCardContent'
+import { BudgetCardContent } from '../../assets/contents/Billings/BudgetCardContent'
 
 const Billing = () => {
   return (
@@ -19,12 +21,9 @@ const Billing = () => {
       <StyledPaymentsContainer>
         <StyledPayments>
           <DebitCard card={DebitCardContent} />
-          <div>
-            <p>salary</p>
-          </div>
-          <div>
-            <p>paypal</p>
-          </div>
+          {BudgetCardContent.map((budget, index) => (
+            <BudgetCard budget={budget} key={budget.title + index} />
+          ))}
         </StyledPayments>
 
         <StyledInvoices>
