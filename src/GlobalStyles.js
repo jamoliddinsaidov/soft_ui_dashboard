@@ -10,6 +10,7 @@ export const colors = {
   lightBlue: '#1ac0e8',
   darkBlue: '#2070fd',
   lightGreen: 'rgb(130, 214, 22)',
+  lightGrey: 'rgb(248, 249, 250)',
   blueGradient: 'linear-gradient(310deg, rgb(33, 82, 255), rgb(33, 212, 253))',
   greenGradient: 'linear-gradient(310deg, rgb(23, 173, 55), rgb(152, 236, 45))',
   greyGradient: 'linear-gradient(310deg, rgb(98, 117, 148), rgb(168, 184, 216))',

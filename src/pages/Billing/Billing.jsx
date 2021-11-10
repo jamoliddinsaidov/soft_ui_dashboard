@@ -8,9 +8,17 @@ import BudgetCard from '../../components/Cards/BudgetCard'
 import PaymentMethodCard from '../../components/Cards/PaymentMethodCard'
 import Invoice from '../../components/ImageAndTexts/Invoice'
 import Button from '../../components/Buttons/SidenavButton'
+import BillingInfoCard from '../../components/Cards/BillingInfoCard'
 
 // styles
-import { StyledPaymentsContainer, StyledPayments, StyledInvoices } from './styles/StyledBilling'
+import {
+  StyledPaymentsContainer,
+  StyledPayments,
+  StyledInvoices,
+  StyledBillingInformationContainer,
+  StyledBillingInformation,
+  StyledTransactions,
+} from './styles/StyledBilling'
 import { colors } from '../../GlobalStyles'
 
 // utils
@@ -18,6 +26,7 @@ import { DebitCardContent } from '../../assets/contents/Billings/DebitCardConten
 import { BudgetCardContent } from '../../assets/contents/Billings/BudgetCardContent'
 import { PaymentCardContent } from '../../assets/contents/Billings/PaymentCardContent'
 import { InvoiceContent } from '../../assets/contents/Billings/InvoiceContent'
+import { BillingInformationContent } from '../../assets/contents/Billings/BillingInformationContent'
 
 const Billing = () => {
   return (
@@ -48,6 +57,18 @@ const Billing = () => {
           </div>
         </StyledInvoices>
       </StyledPaymentsContainer>
+
+      <StyledBillingInformationContainer>
+        <StyledBillingInformation>
+          <h4>Billing Information</h4>
+
+          {BillingInformationContent.map((info) => (
+            <BillingInfoCard info={info} key={info.emailAddress} />
+          ))}
+        </StyledBillingInformation>
+
+        <StyledTransactions>Transactions</StyledTransactions>
+      </StyledBillingInformationContainer>
     </MainLayout>
   )
 }
