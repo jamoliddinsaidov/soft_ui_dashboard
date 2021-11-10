@@ -7,7 +7,7 @@ export const StyledDebitCard = styled(FlexColumn)`
   padding: 1.5em 1em;
   color: #fff;
   border-radius: 1em;
-  box-shadow: 3px 2px 7px -3px rgba(0, 0, 0, 1);
+  box-shadow: 3px 2px 7px -7px rgba(0, 0, 0, 1);
 
   .card_icon {
     font-size: 1.5rem;

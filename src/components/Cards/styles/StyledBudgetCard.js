@@ -10,7 +10,7 @@ export const StyledBudgetCard = styled(FlexColumn)`
   padding: 1em 2em;
   text-align: center;
   color: ${colors.textColor};
-  box-shadow: 3px 2px 7px -9px rgba(0, 0, 0, 1);
+  box-shadow: 3px 2px 7px -7px rgba(0, 0, 0, 1);
 
   h4 {
     font-size: 1.1rem;

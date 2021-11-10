@@ -5,9 +5,9 @@ export const StyledButton = styled.button`
   width: ${({ width }) => (width ? width : '100%')};
   margin-left: ${({ width }) => (width ? `-${(parseInt(width) - 100) / 2}%` : '0')};
   padding: 0.8em 1.6em;
-  border: none;
+  border: ${({ borderColor }) => (borderColor ? `1px solid ${borderColor}` : 'none')};
   border-radius: 0.7em;
-  background-image: ${({ bgColor }) => (bgColor ? bgColor : colors.backgroundColor)};
+  background: ${({ bgColor }) => (bgColor ? bgColor : colors.backgroundColor)};
   color: ${({ color }) => (color ? color : colors.iconColor)};
   text-transform: uppercase;
   font-weight: bold;
