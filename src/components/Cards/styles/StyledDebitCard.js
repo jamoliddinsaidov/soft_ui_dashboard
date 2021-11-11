@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, FlexColumn, FlexBetween } from '../../../GlobalStyles'
+import { FlexColumn, FlexBetween } from '../../../GlobalStyles'
 
 export const StyledDebitCard = styled(FlexColumn)`
   width: 47%;

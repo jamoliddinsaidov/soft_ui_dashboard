@@ -5,18 +5,6 @@ import SidenavButton from '../Buttons/SidenavButton'
 import { colors } from '../../GlobalStyles'
 import { StyledPaymentMethodCard, StyledCardNumberView } from './styles/StyledPaymentMethodCard'
 
-const renderStuff = (card) => {
-  return (
-    <StyledCardNumberView>
-      <div>
-        <img src={card.img} alt='card icon' />
-        <p>{card.cardNumber}</p>
-      </div>
-      {card.icon}
-    </StyledCardNumberView>
-  )
-}
-
 const PaymentMethodCard = ({ paymentMethods }) => {
   return (
     <StyledPaymentMethodCard>
@@ -24,7 +12,18 @@ const PaymentMethodCard = ({ paymentMethods }) => {
         <h3>Payment Method</h3>
         <SidenavButton bgColor={colors.blackGradient} color={'#fff'} title='+ Add new card' />
       </div>
-      <div className='payment_methods'>{paymentMethods.map((payment) => renderStuff(payment))}</div>
+
+      <div className='payment_methods'>
+        {paymentMethods.map((payment, index) => (
+          <StyledCardNumberView key={payment.cardNumber + index}>
+            <div>
+              <img src={payment.img} alt='card icon' />
+              <p>{payment.cardNumber}</p>
+            </div>
+            {payment.icon}
+          </StyledCardNumberView>
+        ))}
+      </div>
     </StyledPaymentMethodCard>
   )
 }
