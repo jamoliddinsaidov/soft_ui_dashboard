@@ -56,6 +56,40 @@ export const StyledBillingInformation = styled.div`
 `
 
 export const StyledTransactions = styled.div`
+  align-self: flex-start;
   flex: 1.2;
   margin-left: 1em;
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 1em;
+
+  .transaction_day {
+    margin-bottom: 1.5em;
+    color: ${colors.textColor};
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+`
+
+export const StyledTransactionsTitle = styled(FlexBetween)`
+  margin-bottom: 2em;
+
+  h4 {
+    color: ${colors.iconColor};
+    font-weight: 600;
+  }
+
+  svg {
+    margin-right: 0.5em;
+    font-size: 1.2rem;
+    display: block;
+    align-self: center;
+  }
+
+  p {
+    color: ${colors.textColor};
+    display: flex;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
 `

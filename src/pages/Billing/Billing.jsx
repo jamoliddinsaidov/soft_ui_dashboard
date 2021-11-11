@@ -9,6 +9,7 @@ import PaymentMethodCard from '../../components/Cards/PaymentMethodCard'
 import Invoice from '../../components/ImageAndTexts/Invoice'
 import Button from '../../components/Buttons/SidenavButton'
 import BillingInfoCard from '../../components/Cards/BillingInfoCard'
+import TransactionCard from '../../components/Cards/TransactionCard'
 
 // styles
 import {
@@ -18,6 +19,7 @@ import {
   StyledBillingInformationContainer,
   StyledBillingInformation,
   StyledTransactions,
+  StyledTransactionsTitle,
 } from './styles/StyledBilling'
 import { colors } from '../../GlobalStyles'
 
@@ -27,6 +29,8 @@ import { BudgetCardContent } from '../../assets/contents/Billings/BudgetCardCont
 import { PaymentCardContent } from '../../assets/contents/Billings/PaymentCardContent'
 import { InvoiceContent } from '../../assets/contents/Billings/InvoiceContent'
 import { BillingInformationContent } from '../../assets/contents/Billings/BillingInformationContent'
+import { TransactionsNew, TransactionsOld } from '../../assets/contents/Billings/TransactionsContent'
+import { MdDateRange } from 'react-icons/md'
 
 const Billing = () => {
   return (
@@ -67,7 +71,25 @@ const Billing = () => {
           ))}
         </StyledBillingInformation>
 
-        <StyledTransactions>Transactions</StyledTransactions>
+        <StyledTransactions>
+          <StyledTransactionsTitle>
+            <h4>Your Transactions</h4>
+            <p>
+              <MdDateRange />
+              23 - 30 March 2020
+            </p>
+          </StyledTransactionsTitle>
+
+          <h4 className='transaction_day'>Newest</h4>
+          {TransactionsNew.map((transaction, index) => (
+            <TransactionCard transaction={transaction} key={transaction.title + index} />
+          ))}
+
+          <h4 className='transaction_day'>Yesterday</h4>
+          {TransactionsOld.map((transaction, index) => (
+            <TransactionCard transaction={transaction} key={transaction.title + index} />
+          ))}
+        </StyledTransactions>
       </StyledBillingInformationContainer>
     </MainLayout>
   )
