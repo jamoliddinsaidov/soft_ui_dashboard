@@ -17,6 +17,7 @@ import {
   StyledProjectsCard,
   StyledPCTable,
 } from './styles/StyledDashboard'
+import { StyledTopHeader } from '../../components/Headers/styles/TopHeader'
 
 // contents
 import { GrowthCardContents } from '../../assets/contents/Dashboard/GrowthCardContents'
@@ -27,7 +28,9 @@ import { OrdersCardContent } from '../../assets/contents/Dashboard/OrdersCardCon
 const Dashboard = () => {
   return (
     <MainLayout>
-      <TopHeader page='Dashboard' />
+      <StyledTopHeader>
+        <TopHeader page='Dashboard' />
+      </StyledTopHeader>
 
       <StyledGrowthCards>
         {GrowthCardContents.map((content, index) => (

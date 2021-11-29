@@ -9,7 +9,7 @@ import MainFooter from '../../components/Footers/MainFooter'
 
 // styles
 import { StyledProjectsTable, StyledPCTable } from './styles/StyledTables'
-
+import { StyledTopHeader } from '../../components/Headers/styles/TopHeader'
 // utils
 import { AuthorsCardContentHeaders, AuthorsCardContentBody } from '../../assets/contents/Tables/AuthorsCardContent'
 import { ProjectsCardTableHeaders, ProjectsCardTableBody } from '../../assets/contents/Tables/ProjectsCardContent'
@@ -17,7 +17,10 @@ import { ProjectsCardTableHeaders, ProjectsCardTableBody } from '../../assets/co
 const Tables = () => {
   return (
     <MainLayout>
-      <TopHeader page='Tables' />
+      <StyledTopHeader>
+        <TopHeader page='Tables' />
+      </StyledTopHeader>
+
       <AuthorsCard contentHeaders={AuthorsCardContentHeaders} contentBody={AuthorsCardContentBody} />
       <StyledProjectsTable>
         <ProjectsCard

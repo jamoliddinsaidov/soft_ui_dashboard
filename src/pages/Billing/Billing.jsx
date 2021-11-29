@@ -22,6 +22,7 @@ import {
   StyledTransactionsTitle,
 } from './styles/StyledBilling'
 import { colors } from '../../GlobalStyles'
+import { StyledTopHeader } from '../../components/Headers/styles/TopHeader'
 
 // utils
 import { DebitCardContent } from '../../assets/contents/Billings/DebitCardContent'
@@ -35,7 +36,9 @@ import { MdDateRange } from 'react-icons/md'
 const Billing = () => {
   return (
     <MainLayout>
-      <TopHeader page='Billing' />
+      <StyledTopHeader>
+        <TopHeader page='Billing' />
+      </StyledTopHeader>
 
       <StyledPaymentsContainer>
         <StyledPayments>

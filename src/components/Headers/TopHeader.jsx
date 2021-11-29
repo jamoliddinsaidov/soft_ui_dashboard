@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 import { MdHome, MdSearch, MdAccountCircle, MdSettings, MdNotifications } from 'react-icons/md'
 
 // styles
-import { StyledTopHeader, BreadcrumbNav, StyledHeaderSearchBar, TopHeaderContainer } from './styles/TopHeader'
+import { BreadcrumbNav, StyledHeaderSearchBar, TopHeaderContainer } from './styles/TopHeader'
 
 const TopHeader = ({ page }) => {
   return (
-    <StyledTopHeader>
+    <>
       <BreadcrumbNav>
         <div>
           <Link to='/'>
@@ -40,7 +40,7 @@ const TopHeader = ({ page }) => {
           <MdNotifications />
         </Link>
       </TopHeaderContainer>
-    </StyledTopHeader>
+    </>
   )
 }
 
