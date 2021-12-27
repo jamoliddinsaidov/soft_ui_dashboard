@@ -1,7 +1,7 @@
 import person from '../../images/team-1.jpg'
 import { IoCube } from 'react-icons/io5'
 import { MdMessage } from 'react-icons/md'
-import { GrUserSettings } from 'react-icons/gr'
+import { GoSettings } from 'react-icons/go'
 
 export const ProfileInfoContent = {
   img: person,
@@ -11,15 +11,15 @@ export const ProfileInfoContent = {
 
 export const ProfileTopHeaderIconContent = [
   {
-    icon: IoCube,
+    icon: <IoCube />,
     title: 'App',
   },
   {
-    icon: MdMessage,
+    icon: <MdMessage />,
     title: 'Message',
   },
   {
-    icon: GrUserSettings,
+    icon: <GoSettings />,
     title: 'Settings',
   },
 ]
