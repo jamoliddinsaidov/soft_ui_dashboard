@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // components
 import MainLayout from '../../layouts/MainLayout'
@@ -13,6 +13,17 @@ import { StypedProfileHeader, ProfileTopHeaderIcons } from './styles/StyledProfi
 import { ProfileInfoContent, ProfileTopHeaderIconContent } from '../../assets/contents/Profile/ProfileInfoContent'
 
 const Profile = () => {
+  const [isIconActive, setIsIconActive] = useState([true, false, false])
+
+  // handlers
+  const handleIconClick = (index) => {
+    let newArr = [...isIconActive]
+    let currentActiveIndex = newArr.findIndex((state) => state)
+    newArr[currentActiveIndex] = false
+    newArr[index] = true
+    setIsIconActive(newArr)
+  }
+
   return (
     <MainLayout>
       <ProfileTopHeader page='Profile' />
@@ -26,7 +37,14 @@ const Profile = () => {
         />
         <ProfileTopHeaderIcons>
           {ProfileTopHeaderIconContent.map((content, index) => (
-            <IconAndText icon={content.icon} text={content.title} key={index + content.title} />
+            <IconAndText
+              icon={content.icon}
+              text={content.title}
+              key={index + content.title}
+              index={index}
+              isIconActive={isIconActive}
+              handleIconClick={handleIconClick}
+            />
           ))}
         </ProfileTopHeaderIcons>
       </StypedProfileHeader>

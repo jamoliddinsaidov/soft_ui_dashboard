@@ -7,12 +7,15 @@ export const StyledIconAndText = styled(FlexBetween)`
   padding: 0.4rem 1.1rem;
   color: ${colors.iconColor};
   cursor: pointer;
-
-  box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 1);
-  border-radius: 0.5rem;
-  background: #fff;
+  transition: all 300ms ease;
 
   p {
     margin-left: 0.5em;
+  }
+
+  &.icon_bg {
+    box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 1);
+    border-radius: 0.5rem;
+    background: #fff;
   }
 `
