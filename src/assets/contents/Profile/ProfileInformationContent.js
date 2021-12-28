@@ -11,7 +11,7 @@ const Socials = () => {
 }
 
 export const ProfileDescriptionContent = {
-  text: 'Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).',
+  text: 'Hi, I’m Anne Hathaway, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality).',
 }
 
 export const ProfileDetailsContent = [

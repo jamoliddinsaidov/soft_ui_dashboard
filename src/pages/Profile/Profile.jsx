@@ -13,6 +13,7 @@ import {
   ProfileTopHeaderIcons,
   StyledPlatformSettingsContainer,
   StyledPlatformSettings,
+  StyledProfileDetails,
 } from './styles/StyledProfile'
 
 // contents
@@ -21,6 +22,10 @@ import {
   PlatformSettingsAccountContent,
   PlatformSettingsApplicationContent,
 } from '../../assets/contents/Profile/PlatformSettingsContent'
+import {
+  ProfileDescriptionContent,
+  ProfileDetailsContent,
+} from '../../assets/contents/Profile/ProfileInformationContent'
 
 const Profile = () => {
   const [isIconActive, setIsIconActive] = useState([true, false, false])
@@ -69,6 +74,15 @@ const Profile = () => {
 
         <StyledPlatformSettings>
           <h4>Profile Information</h4>
+
+          <p className='profile-description'>{ProfileDescriptionContent.text}</p>
+
+          {ProfileDetailsContent.map(({ title, detail }) => (
+            <StyledProfileDetails key={title}>
+              <h4>{title}</h4>
+              <p>{detail}</p>
+            </StyledProfileDetails>
+          ))}
         </StyledPlatformSettings>
 
         <StyledPlatformSettings>

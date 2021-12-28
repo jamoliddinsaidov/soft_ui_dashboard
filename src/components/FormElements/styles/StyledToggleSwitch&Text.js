@@ -16,6 +16,7 @@ export const StyledSwitchContainer = styled.label`
   display: inline-block;
   width: 50px;
   height: 23px;
+  cursor: pointer;
 
   input {
     width: 0;
