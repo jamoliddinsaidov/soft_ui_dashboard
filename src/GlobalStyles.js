@@ -98,3 +98,10 @@ export const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
 `
+export const CardContainer = styled.div`
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 1em;
+  color: ${colors.iconColor};
+  box-shadow: 3px 2px 7px -12px rgba(0, 0, 0, 1);
+`
