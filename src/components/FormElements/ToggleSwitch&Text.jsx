@@ -14,7 +14,7 @@ const ToggleSwitchText = ({ isChecked, text }) => {
     <StyledSwitchTextContainer>
       <StyledSwitchContainer>
         <input type='checkbox' checked={isSwitchChecked} onChange={handleCheckboxClick} />
-        <span class='slider round'></span>
+        <span className='slider round'></span>
       </StyledSwitchContainer>
       <p>{text}</p>
     </StyledSwitchTextContainer>

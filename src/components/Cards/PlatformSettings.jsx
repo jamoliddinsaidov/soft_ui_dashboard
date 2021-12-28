@@ -11,7 +11,7 @@ const PlatformSettings = ({ title, content }) => {
     <StyledPlatformSettings>
       <h4>{title}</h4>
       {content.map(({ isChecked, text }) => (
-        <ToggleSwitchText isChecked={isChecked} text={text} />
+        <ToggleSwitchText isChecked={isChecked} text={text} key={text} />
       ))}
     </StyledPlatformSettings>
   )
