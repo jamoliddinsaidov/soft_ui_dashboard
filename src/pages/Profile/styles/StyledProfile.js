@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex, FlexBetween, colors } from '../../../GlobalStyles'
+import { Flex, FlexBetween, colors, CardContainer } from '../../../GlobalStyles'
 import { StyledTopHeader } from '../../../components/Headers/styles/TopHeader'
 
 export const StypedProfileHeader = styled(StyledTopHeader)`
@@ -10,3 +10,13 @@ export const StypedProfileHeader = styled(StyledTopHeader)`
 `
 
 export const ProfileTopHeaderIcons = styled(FlexBetween)``
+
+export const StyledPlatformSettingsContainer = styled(FlexBetween)``
+
+export const StyledPlatformSettings = styled(CardContainer)`
+  width: 32%;
+
+  h4 {
+    font-weight: 500;
+  }
+`

@@ -5,12 +5,22 @@ import MainLayout from '../../layouts/MainLayout'
 import ProfileTopHeader from '../../components/Headers/ProfileTopHeader'
 import MainProfileInfo from '../../components/ImageAndTexts/ImageAndTexts'
 import IconAndText from '../../components/ImageAndTexts/IconAndText'
+import PlatformSettings from '../../components/Cards/PlatformSettings'
 
 // styles
-import { StypedProfileHeader, ProfileTopHeaderIcons } from './styles/StyledProfile'
+import {
+  StypedProfileHeader,
+  ProfileTopHeaderIcons,
+  StyledPlatformSettingsContainer,
+  StyledPlatformSettings,
+} from './styles/StyledProfile'
 
 // contents
 import { ProfileInfoContent, ProfileTopHeaderIconContent } from '../../assets/contents/Profile/ProfileInfoContent'
+import {
+  PlatformSettingsAccountContent,
+  PlatformSettingsApplicationContent,
+} from '../../assets/contents/Profile/PlatformSettingsContent'
 
 const Profile = () => {
   const [isIconActive, setIsIconActive] = useState([true, false, false])
@@ -35,6 +45,7 @@ const Profile = () => {
           borderRadius={20}
           imgWidth={13}
         />
+
         <ProfileTopHeaderIcons>
           {ProfileTopHeaderIconContent.map((content, index) => (
             <IconAndText
@@ -48,7 +59,22 @@ const Profile = () => {
           ))}
         </ProfileTopHeaderIcons>
       </StypedProfileHeader>
-      <h2>Profile page content goes here</h2>
+
+      <StyledPlatformSettingsContainer>
+        <StyledPlatformSettings>
+          <h4>Platform Settings</h4>
+          <PlatformSettings title='account' content={PlatformSettingsAccountContent} />
+          <PlatformSettings title='application' content={PlatformSettingsApplicationContent} />
+        </StyledPlatformSettings>
+
+        <StyledPlatformSettings>
+          <h4>Profile Information</h4>
+        </StyledPlatformSettings>
+
+        <StyledPlatformSettings>
+          <h4>Conversations</h4>
+        </StyledPlatformSettings>
+      </StyledPlatformSettingsContainer>
     </MainLayout>
   )
 }
