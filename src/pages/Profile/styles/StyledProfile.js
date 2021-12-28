@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Flex, FlexBetween, colors, CardContainer } from '../../../GlobalStyles'
 import { StyledTopHeader } from '../../../components/Headers/styles/TopHeader'
+import { StyledImageAndTexts } from '../../../components/ImageAndTexts/styles/StyledImgAndTxts'
 
 export const StypedProfileHeader = styled(StyledTopHeader)`
   width: 95%;
@@ -26,7 +27,13 @@ export const StyledPlatformSettings = styled(CardContainer)`
   width: 32%;
 
   h4 {
-    font-weight: 500;
+    font-weight: 600;
+  }
+
+  h4.platform-heading {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
   }
 `
 export const StyledProfileDetails = styled(Flex)`
@@ -49,6 +56,41 @@ export const StyledProfileDetails = styled(Flex)`
       &:hover {
         color: ${colors.iconColor};
       }
+    }
+  }
+`
+
+export const StyledContact = styled(StyledImageAndTexts)`
+  margin: 1rem 0 1.5rem;
+
+  img {
+    box-shadow: 3px 2px 7px -12px rgba(0, 0, 0, 1);
+    margin-right: 0.5rem;
+  }
+
+  p.title {
+    font-size: 1rem;
+    color: ${colors.iconColor};
+    font-weight: 500;
+  }
+
+  p.subtitle {
+    font-size: 0.8rem;
+    color: ${colors.textColor};
+    font-weight: 400;
+    margin-top: 0.2rem;
+  }
+
+  p.reply {
+    text-transform: uppercase;
+    color: ${colors.lightBlue};
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: color 300ms ease;
+    cursor: pointer;
+
+    &:hover {
+      color: ${colors.darkBlue};
     }
   }
 `
