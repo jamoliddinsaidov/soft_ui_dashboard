@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import Tables from './pages/Tables/Tables'
 import Billing from './pages/Billing/Billing'
 import Profile from './pages/Profile/Profile'
+import SignIn from './pages/SignIn/SignIn'
 
 // styles
 import { GlobalStyles, StyledApp } from './GlobalStyles'
@@ -18,7 +19,8 @@ function App() {
         <Route path='/tables' component={Tables} />
         <Route path='/billing' component={Billing} />
         <Route path='/profile' component={Profile} />
-        <Route exact path='/dashboard' component={Dashboard} />
+        <Route path='/signin' component={SignIn} />
+        <Route path='/dashboard' component={Dashboard} />
         <Redirect to='/dashboard' />
       </Switch>
     </StyledApp>

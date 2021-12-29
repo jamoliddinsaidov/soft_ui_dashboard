@@ -3,8 +3,10 @@ import styled, { createGlobalStyle } from 'styled-components'
 export const colors = {
   backgroundColor: '#f0f1f3',
   backgroundNavColor: '#e9ecee',
-  iconColor: '#404373',
-  textColor: 'rgb(103, 116, 142);',
+  iconColor: 'rgb(64, 67, 115)',
+  textColor: 'rgb(103, 116, 142)',
+  darkTextColor: 'rgb(52, 71, 103)',
+  darkTextHoverColor: 'rgb(3, 29, 71)',
   successColor: 'rgb(130, 214, 22)',
   errorColor: 'rgb(234, 6, 6)',
   lightBlue: '#1ac0e8',
