@@ -32,10 +32,10 @@ export const StyledSidenavLinkButton = styled.button`
   justify-content: center;
   padding: 0.5em;
   font-size: 1rem;
-  background: ${({ bgColor }) => (bgColor ? bgColor : colors.backgroundNavColor)};
+  background: ${({ bgColor }) => (bgColor ? bgColor : '#fff')};
   border: none;
   border-radius: 0.5em;
-  box-shadow: 3px 2px 10px -5px rgba(0, 0, 0, 0.51);
+  box-shadow: 0px 1px 10px -4.5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   color: ${({ color }) => (color ? color : colors.iconColor)};
 `
