@@ -8,6 +8,7 @@ import IconAndText from '../../components/ImageAndTexts/IconAndText'
 import PlatformSettings from '../../components/Cards/PlatformSettings'
 import { ConversationsContent } from '../../assets/contents/Profile/ConversationsContent'
 import MainFooter from '../../components/Footers/MainFooter'
+import ProfileProjectCard from '../../components/Cards/ProfileProjectCard'
 
 // styles
 import {
@@ -17,6 +18,7 @@ import {
   StyledPlatformSettings,
   StyledProfileDetails,
   StyledContact,
+  StyledProfileProjectsContainer,
 } from './styles/StyledProfile'
 
 // contents
@@ -29,6 +31,7 @@ import {
   ProfileDescriptionContent,
   ProfileDetailsContent,
 } from '../../assets/contents/Profile/ProfileInformationContent'
+import { ProfileProjectsContent } from '../../assets/contents/Profile/ProfileProjectsContent'
 
 const Profile = () => {
   const [isIconActive, setIsIconActive] = useState([true, false, false])
@@ -98,6 +101,21 @@ const Profile = () => {
           ))}
         </StyledPlatformSettings>
       </StyledPlatformSettingsContainer>
+
+      <StyledProfileProjectsContainer>
+        <h4>Projects</h4>
+        <p className='profile-job'>Architects design houses</p>
+
+        <div className='projects-container'>
+          {ProfileProjectsContent.map((project) => (
+            <ProfileProjectCard project={project} key={project.name} />
+          ))}
+          <div className='new-project'>
+            <p>+</p>
+            <p>New project</p>
+          </div>
+        </div>
+      </StyledProfileProjectsContainer>
       <MainFooter />
     </MainLayout>
   )
