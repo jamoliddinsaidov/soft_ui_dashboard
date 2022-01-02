@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Layout from '../../layouts/TopNavigationLayout'
 import ToggleSwitchText from '../../components/FormElements/ToggleSwitch&Text'
 import Button from '../../components/Buttons/SidenavButton'
+import SignInFooter from '../../components/Footers/SignInFooter'
 
 // styles
 import { StyledSignIn, FormContainer } from './styles/StyledSignIn'
@@ -33,6 +34,9 @@ const SignIn = () => {
           </p>
         </FormContainer>
       </Layout>
+
+      <div className='background_img'></div>
+      <SignInFooter />
     </StyledSignIn>
   )
 }

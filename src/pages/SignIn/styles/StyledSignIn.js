@@ -1,11 +1,27 @@
 import styled from 'styled-components'
 import { colors } from '../../../GlobalStyles'
+import img from '../../../assets/images/curved-images/curved-6.jpg'
 
 export const StyledSignIn = styled.div`
   margin: -2rem -1rem;
-  padding: 2rem 1rem;
-  background: white;
-  min-height: 110vh;
+  padding: 1.5rem 1rem;
+  background: #fff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  z-index: 1;
+
+  .background_img {
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 45%;
+    height: 80%;
+    transform: skewX(-10deg);
+    border-radius: 1rem;
+    background: url(${img}) 100% 100% / cover;
+    z-index: -1;
+  }
 `
 export const FormContainer = styled.div`
   width: 60%;
