@@ -2,9 +2,11 @@ import styled from 'styled-components'
 import { colors, Flex } from '../../../GlobalStyles'
 
 export const StyledSwitchTextContainer = styled(Flex)`
+  width: 100%;
+
   p {
-    margin-left: 1em;
-    color: ${colors.textColor};
+    margin-left: 0.8rem;
+    color: ${({ textColor }) => (textColor ? textColor : `${colors.textColor}`)};
     width: 90%;
   }
 
@@ -14,9 +16,10 @@ export const StyledSwitchTextContainer = styled(Flex)`
 export const StyledSwitchContainer = styled.label`
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 23px;
+  width: ${({ width }) => (width ? `${width}px` : '48px')};
+  height: 22px;
   cursor: pointer;
+  margin-top: ${({ width }) => (width ? '0.5rem' : '0')};
 
   input {
     width: 0;
@@ -30,6 +33,7 @@ export const StyledSwitchContainer = styled.label`
     background-color: #e4e0e0;
     -webkit-transition: 400ms;
     transition: 400ms;
+    display: block;
 
     &::before {
       content: '';
@@ -37,7 +41,7 @@ export const StyledSwitchContainer = styled.label`
       height: 18px;
       width: 18px;
       left: 2.5px;
-      bottom: 2.5px;
+      bottom: 2.2px;
       background-color: #fff;
       -webkit-transition: 400ms;
       transition: 400ms;
@@ -54,10 +58,6 @@ export const StyledSwitchContainer = styled.label`
 
   input:checked + .slider {
     background: ${colors.blackGradient};
-  }
-
-  input:focus + .slider {
-    /* box-shadow: 0 0 1px #2196f3; */
   }
 
   input:checked + .slider::before {
