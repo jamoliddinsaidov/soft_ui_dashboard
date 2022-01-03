@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Flex, FlexBetween, colors } from '../../../GlobalStyles'
+import { colors } from '../../../GlobalStyles'
 import { StyledTopHeader } from './TopHeader'
 import bgImg from '../../../assets/images/curved-images/curved0.jpg'
 

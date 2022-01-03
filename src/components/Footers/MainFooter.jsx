@@ -10,7 +10,7 @@ const MainFooter = () => {
   return (
     <StyledMainFooter>
       <p>
-        &copy; 2021, made with <MdFavorite /> by
+        Made with <MdFavorite /> by
         <a href='https://github.com/sjamoliddin/' target='_blank' rel='noreferrer'>
           Jamoliddin
         </a>
