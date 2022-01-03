@@ -19,13 +19,10 @@ export const StyledTopNav = styled(FlexBetween)`
   button {
     border-radius: 2rem;
   }
-
-  div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 `
+
+export const StyledLinksContainer = styled(FlexBetween)``
+
 export const StyledNavLink = styled(NavLink)`
   margin-left: 2rem;
   display: flex;

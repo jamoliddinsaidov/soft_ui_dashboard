@@ -4,28 +4,27 @@ import React from 'react'
 import Button from '../Buttons/SidenavButton'
 
 // styles
-import { StyledTopNav, StyledNavLink } from './styles/StyledTopNav'
-import { colors } from '../../GlobalStyles'
+import { StyledNavLink, StyledLinksContainer } from './styles/StyledTopNav'
 
 // contents
 import { TopNavContents } from '../../assets/contents/Navigations/TopnavContent'
 
-const TopNav = () => {
+const TopNav = ({ btnWidth, btnBgColor }) => {
   return (
-    <StyledTopNav>
+    <>
       <h4>Soft UI Dashboard</h4>
 
-      <div>
+      <StyledLinksContainer>
         {TopNavContents.map((nav) => (
           <StyledNavLink to={nav.link} key={nav.title}>
             <p className='icon'>{nav.icon}</p>
             <p className='text'>{nav.title}</p>
           </StyledNavLink>
         ))}
-      </div>
+      </StyledLinksContainer>
 
-      <Button title='free download' bgColor={colors.blackGradient} color='#fff' width='15%' />
-    </StyledTopNav>
+      <Button title='free download' bgColor={btnBgColor} color='#fff' width={btnWidth} />
+    </>
   )
 }
 
