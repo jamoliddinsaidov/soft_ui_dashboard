@@ -1,6 +1,6 @@
 # Soft UI Dashboard
 
-Demo of the application can be found [here](https://soft-dashboard.netlify.app/)
+Demo of the application can be found [here](https://soft-dashboard.netlify.app/) (currently, only available on the desktop view)
 
 ## Available Scripts
 
