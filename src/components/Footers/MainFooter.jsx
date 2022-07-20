@@ -11,7 +11,7 @@ const MainFooter = () => {
     <StyledMainFooter>
       <p>
         Made with <MdFavorite /> by
-        <a href='https://github.com/sjamoliddin/' target='_blank' rel='noreferrer'>
+        <a href='https://github.com/jamoliddinsaidov/soft_ui_dashboard' target='_blank' rel='noreferrer'>
           Jamoliddin
         </a>
         for a better web.
@@ -19,7 +19,7 @@ const MainFooter = () => {
 
       <SyledFooterLinks>
         <li>
-          <a href='https://github.com/sjamoliddin/' target='_blank' rel='noreferrer'>
+          <a href='https://github.com/jamoliddinsaidov/soft_ui_dashboard' target='_blank' rel='noreferrer'>
             GitHub
           </a>
         </li>
